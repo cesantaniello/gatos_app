@@ -7,19 +7,19 @@ package com.platzi.gatos_app;
 
 /**
  *
- * @author carlos
+ * @author ohmyfi
  */
 public class Gatos {
-    int id;
+    String id;
     String url;
     String apikey = "bafe2021-67c5-4b55-94bc-59a7f88e4e97";
     String image;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -46,6 +46,7 @@ public class Gatos {
     public void setImage(String image) {
         this.image = image;
     }
+    
     
     
 }

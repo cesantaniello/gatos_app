@@ -5,31 +5,30 @@
  */
 package com.platzi.gatos_app;
 
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author carlos
+ * @author ohmyfi
  */
 public class Inicio {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         int opcion_menu = -1;
-        String[] botones = {
-            "1. Ver gatos",            
-            "2. Salir"
-        };
+        String[] botones = {" 1. ver gatos", "2. salir"};
         
         do{
-            //Menu principal
-            String opcion = (String) JOptionPane.showInputDialog(
-                    null, "Gatitos Java", "Menu principal", JOptionPane.INFORMATION_MESSAGE,
-                    null, botones, botones[0]);
             
-            //Validamos la opción seleccionada
-            for(int i = 0; i < botones.length; i++){
-                if(opcion.equals(botones[i]))
+            //menu principal
+            String opcion = (String) JOptionPane.showInputDialog(null, "Gatitos java", "Menu principal", JOptionPane.INFORMATION_MESSAGE,
+                    null, botones,botones[0]);
+            
+            //validamos que opcion selecciona el usuario
+            for(int i=0;i<botones.length;i++){
+                if(opcion.equals(botones[i])){
                     opcion_menu = i;
+                }
             }
             
             switch(opcion_menu){
@@ -37,9 +36,10 @@ public class Inicio {
                     GatosService.verGatos();
                     break;
                 default:
-                    break;                    
-            }
-            
+                    break;
+            }     
         }while(opcion_menu != 1);
+        
     }
+    
 }
