@@ -1,1 +1,1 @@
-# Programa que muestra imágenes al azar de gatos
+# Programa que muestra imágenes de gatos al azar
